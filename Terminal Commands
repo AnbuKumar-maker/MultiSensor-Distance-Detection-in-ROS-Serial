@@ -1,0 +1,13 @@
+Step 1 - Initiate ROS in Jetson Nano by executing the command roscore (DO NOT CLOSE THE TERMINAL)
+
+Step 2 - Open a new terminal to execuite the below command to establish ROSSerial communication between Jetson Nano and Arduino (DO NOT CLOSE THE TERMINAL)
+
+rosrun rosserial_python serial_node.py /dev/ttyACM0
+
+Step 3 - To display the range of sensors activated you need to initiate the list in ROS, execute the below command (DO NOT CLOSE THE TERMINAL)
+
+rostopic list
+
+Step 4 - To execute the output of each sensor one by one, execute the below command
+
+Rrostopic echo /ultrasound_center
